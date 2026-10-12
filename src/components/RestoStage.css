@@ -1,0 +1,50 @@
+.resto-stage-wrap {
+  width: 100%;
+}
+
+.resto-stage,
+.resto-stage canvas {
+  transform: none;
+  will-change: auto;
+}
+
+.resto-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  max-height: min(48vh, 360px);
+  overflow: hidden;
+  background:
+    radial-gradient(closest-side at 50% 55%, rgba(27, 124, 152, 0.07), rgba(255, 255, 255, 0) 72%),
+    #ffffff;
+}
+
+@media (min-width: 640px) {
+  .resto-stage {
+    aspect-ratio: 5 / 4;
+    max-height: min(52vh, 420px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resto-stage {
+    aspect-ratio: 5 / 4;
+    max-height: none;
+  }
+}
+
+.resto-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: pan-y;
+  cursor: crosshair;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.resto-stage.is-ready canvas {
+  opacity: 1;
+}
