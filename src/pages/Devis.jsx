@@ -71,7 +71,7 @@ const Devis = () => {
 
           <div className="chip mb-5 sm:mb-6">
             <Calculator className="w-4 h-4 text-secondary mr-2" />
-            Simulateur de Devis · Grille octobre 2026
+            Simulateur de devis
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
